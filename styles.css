@@ -20,6 +20,7 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 .image-placeholder img{width:100%;height:100%;object-fit:cover;-webkit-mask-image:radial-gradient(ellipse at center,black 50%,transparent 100%);mask-image:radial-gradient(ellipse at center,black 50%,transparent 100%)}
 .hero-art{height:auto;aspect-ratio:1600 / 889}
 .image-placeholder img{object-fit:contain}
+.image-placeholder img{-webkit-mask-image:radial-gradient(ellipse at center,black 35%,transparent 100%);mask-image:radial-gradient(ellipse at center,black 35%,transparent 100%)}
 @media(max-width:760px){.hero-art{height:auto;aspect-ratio:1600 / 889}}
 .button-primary{border-radius:999px;box-shadow:0 8px 28px rgba(242,107,39,.18)}
 .service-card{margin-bottom:14px;padding:25px 24px;border:1px solid rgba(255,255,255,.11);border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.012));transition:.25s}
