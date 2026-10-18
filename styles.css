@@ -10,6 +10,8 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 .header-cta:hover{border-color:var(--orange)}
 .hero-art{border-radius:28px;box-shadow:0 25px 80px rgba(242,107,39,.1)}
 .image-placeholder{inset:18px 18px 58px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:#0c0907;box-shadow:inset 0 0 45px rgba(242,107,39,.12)}
+.image-placeholder{border:0}
+.hero-name{margin:0 0 18px;color:var(--white);font-size:14px;letter-spacing:.12em;text-transform:uppercase}
 .button-primary{border-radius:999px;box-shadow:0 8px 28px rgba(242,107,39,.18)}
 .service-card{margin-bottom:14px;padding:25px 24px;border:1px solid rgba(255,255,255,.11);border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.012));transition:.25s}
 .service-card:hover{padding-left:30px;border-color:rgba(242,107,39,.65);background:linear-gradient(135deg,rgba(242,107,39,.12),rgba(255,255,255,.02));box-shadow:0 12px 35px rgba(242,107,39,.08)}
