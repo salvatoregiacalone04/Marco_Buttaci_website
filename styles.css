@@ -48,6 +48,9 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 @media(max-width:760px){.social-header{display:block;text-align:center}.social-header .section-label{position:static;text-align:left;margin-bottom:12px}}
 .social-grid{grid-template-columns:repeat(2,1fr);width:100%}
 
+.hero-name{position:relative;top:-12px;font-size:clamp(16px,1.8vw,21px);letter-spacing:.1em;margin-bottom:8px}
+.call-form button:disabled{cursor:wait;opacity:.6}
+
 /* Header ridotto al solo menu burger. */
 .site-header{position:relative;justify-content:flex-end;border-bottom:0}
 .main-nav{display:none}
