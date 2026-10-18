@@ -23,6 +23,9 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 .image-placeholder img{-webkit-mask-image:radial-gradient(ellipse at center,black 35%,transparent 100%);mask-image:radial-gradient(ellipse at center,black 35%,transparent 100%)}
 .hero-art{background:#000;box-shadow:none}
 .hero-art .art-glow{display:none}
+.hero-art{width:105%}
+.profile-copy{max-width:560px;color:var(--muted);font-size:14px;line-height:1.65;margin-top:24px}.profile-copy p{margin:0 0 14px}.profile-copy h3{color:var(--white);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin:24px 0 10px}.profile-copy ul{margin:0 0 14px;padding-left:18px}.profile-copy li{margin-bottom:10px}.hero-copy .hero-actions{margin-top:26px}
+@media(max-width:760px){.hero-art{width:100%}}
 @media(max-width:760px){.hero-art{height:auto;aspect-ratio:1600 / 889}}
 .button-primary{border-radius:999px;box-shadow:0 8px 28px rgba(242,107,39,.18)}
 .service-card{margin-bottom:14px;padding:25px 24px;border:1px solid rgba(255,255,255,.11);border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.012));transition:.25s}
