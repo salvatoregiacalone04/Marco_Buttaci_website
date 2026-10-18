@@ -47,3 +47,26 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 .social-heading em{color:var(--white)}
 @media(max-width:760px){.social-header{display:block;text-align:center}.social-header .section-label{position:static;text-align:left;margin-bottom:12px}}
 .social-grid{grid-template-columns:repeat(2,1fr);width:100%}
+
+/* Header ridotto al solo menu burger. */
+.site-header{position:relative;justify-content:flex-end}
+.main-nav{display:none}
+.menu-toggle{display:block;cursor:pointer;padding:8px;line-height:1;transition:color .25s ease,transform .25s ease}
+.menu-toggle:hover{color:var(--orange);transform:scale(1.08)}
+.main-nav.is-open{display:flex;position:absolute;z-index:5;top:90px;right:0;margin:0;padding:22px;flex-direction:column;gap:18px;background:var(--surface);border:1px solid var(--line);animation:menuReveal .3s ease both}
+
+/* Apertura morbida dei menu a tendina. */
+.profile-copy,.lesson-content,.call-form{transform-origin:top center}
+.profile-dropdown[open] .profile-copy,
+.lesson-dropdown[open] .lesson-content,
+.lesson-dropdown[open] .call-form{animation:dropdownReveal .4s ease both}
+.profile-dropdown summary span,
+.lesson-dropdown summary span{display:inline-block;transition:transform .35s ease}
+.profile-dropdown[open] summary span,
+.lesson-dropdown[open] summary span{transform:rotate(180deg)}
+@keyframes dropdownReveal{from{opacity:0;transform:translateY(-10px) scaleY(.96)}to{opacity:1;transform:translateY(0) scaleY(1)}}
+@keyframes menuReveal{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:760px){
+  .main-nav.is-open{top:70px;left:0;right:0}
+}
