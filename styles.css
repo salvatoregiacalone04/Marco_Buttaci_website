@@ -44,5 +44,6 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 .call-form .button{justify-self:center;min-width:190px;justify-content:center;border-radius:5px}
 .call-form .button{border:1px solid var(--orange);border-radius:999px;background:#080808;color:var(--white);box-shadow:0 0 0 rgba(242,107,39,0);transition:background .25s ease,box-shadow .25s ease,color .25s ease}.call-form .button:hover{background:rgba(242,107,39,.12);color:var(--white);box-shadow:0 0 18px rgba(242,107,39,.24)}
 .social-header{position:relative;display:flex;align-items:center;justify-content:center;min-height:60px;margin-bottom:48px}.social-header .section-label{position:absolute;left:0}.social-heading{margin:0;color:var(--white);font-family:var(--serif);font-size:clamp(34px,4vw,52px);font-style:italic;font-weight:500}
+.social-heading em{color:var(--white)}
 @media(max-width:760px){.social-header{display:block;text-align:center}.social-header .section-label{position:static;text-align:left;margin-bottom:12px}}
 .social-grid{grid-template-columns:repeat(2,1fr);width:100%}
