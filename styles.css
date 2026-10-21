@@ -269,12 +269,27 @@ h1 {
   display: none;
 }
 .lesson-accordion summary::after {
-  content: "⌄";
+  content: "↓";
   font-size: 1.5rem;
   font-weight: 300;
+  transition: transform 0.25s ease;
 }
 .lesson-accordion[open] summary::after {
-  content: "⌃";
+  content: "↑";
+}
+.lesson-accordion[open] > *:not(summary) {
+  animation: accordion-reveal 0.35s ease both;
+  transform-origin: top;
+}
+@keyframes accordion-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .lesson-info-list {
   display: grid;
@@ -300,17 +315,15 @@ h1 {
 }
 .lesson-cta {
   margin-top: 1rem;
+  animation: cta-highlight 2.2s ease-in-out infinite;
 }
-.lesson-cta[open] {
-  animation: cta-stroke 1.8s ease-in-out infinite;
-}
-@keyframes cta-stroke {
+@keyframes cta-highlight {
   0%,
   100% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
   50% {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.22);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
   }
 }
 .contact-form {
