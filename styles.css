@@ -127,19 +127,19 @@ h1 {
   letter-spacing: 0.04em;
 }
 .word-one {
-  transform: translateY(-15px);
+  transform: translateY(-25px);
 }
 .word-two {
-  transform: translateY(-5px);
+  transform: translateY(-15px);
 }
 .word-three {
-  transform: translateY(5px);
+  transform: translateY(-5px);
 }
 .word-four {
-  transform: translateY(15px);
+  transform: translateY(5px);
 }
 .word-five {
-  transform: translateY(25px);
+  transform: translateY(15px);
 }
 
 .site-sections {
@@ -262,7 +262,8 @@ h1 {
   gap: 1rem;
   padding: 1.3rem 0;
   cursor: pointer;
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: clamp(0.82rem, 1.8vw, 1.2rem);
+  white-space: nowrap;
   list-style: none;
 }
 .lesson-accordion summary::-webkit-details-marker {
@@ -315,7 +316,13 @@ h1 {
 }
 .lesson-cta {
   margin-top: 1rem;
-  animation: cta-highlight 2.2s ease-in-out infinite;
+  animation: cta-highlight 1.35s ease-in-out infinite;
+}
+.lesson-cta summary {
+  letter-spacing: 0.04em;
+}
+.lesson-cta summary::after {
+  animation: cta-arrow 1.1s ease-in-out infinite;
 }
 @keyframes cta-highlight {
   0%,
@@ -323,7 +330,18 @@ h1 {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
   50% {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+    box-shadow:
+      0 0 0 4px rgba(255, 255, 255, 0.32),
+      0 0 18px rgba(255, 255, 255, 0.18);
+  }
+}
+@keyframes cta-arrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
   }
 }
 .contact-form {
