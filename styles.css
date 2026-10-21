@@ -93,7 +93,8 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 .lesson-row span{color:var(--orange);font-size:22px;font-weight:400}
 .lesson-dropdown:first-child .lesson-row{color:var(--white)}
 .lesson-row.call-cta{color:var(--orange)}
-.whatsapp-link{justify-content:flex-start;gap:10px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;transition:color .25s ease}
+.whatsapp-link{justify-content:space-between;text-decoration:none;transition:color .25s ease}
 .whatsapp-link,.whatsapp-link:hover{color:var(--white)}
+.whatsapp-link .whatsapp-label{color:var(--white);font-size:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
 .whatsapp-link .whatsapp-arrow{color:var(--white);font-size:18px;line-height:1}
 .music{padding-bottom:0}
