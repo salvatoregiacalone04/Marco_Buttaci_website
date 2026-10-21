@@ -107,39 +107,49 @@ h1 {
 }
 
 .staff-tagline {
+  --staff-gap: clamp(18px, 4vw, 36px);
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  height: calc(var(--staff-gap) * 5 + 1px);
   width: min(580px, 90vw);
-  margin-top: 3rem;
-  padding: 1.4rem 0;
+  margin-top: calc(var(--staff-gap) * 1.5);
   background: repeating-linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.65) 0 1px,
-    transparent 1px 10px
+    transparent 1px var(--staff-gap)
   );
 }
 
 .staff-word {
+  position: absolute;
+  left: 0;
+  width: 20%;
   z-index: 1;
-  font-size: clamp(0.8rem, 1.7vw, 1.15rem);
+  font-size: calc(var(--staff-gap) * 0.58);
   font-style: italic;
+  line-height: 1;
   letter-spacing: 0.04em;
+  white-space: nowrap;
+  transform: translateY(-50%);
 }
 .word-one {
-  transform: translateY(-25px);
+  left: 0%;
+  top: calc(var(--staff-gap) * 0.5);
 }
 .word-two {
-  transform: translateY(-15px);
+  left: 20%;
+  top: calc(var(--staff-gap) * 1.5);
 }
 .word-three {
-  transform: translateY(-5px);
+  left: 40%;
+  top: calc(var(--staff-gap) * 2.5);
 }
 .word-four {
-  transform: translateY(5px);
+  left: 60%;
+  top: calc(var(--staff-gap) * 3.5);
 }
 .word-five {
-  transform: translateY(15px);
+  left: 80%;
+  top: calc(var(--staff-gap) * 4.5);
 }
 
 .site-sections {
@@ -316,24 +326,42 @@ h1 {
 }
 .lesson-cta {
   margin-top: 1rem;
-  animation: cta-highlight 1.35s ease-in-out infinite;
 }
 .lesson-cta summary {
   letter-spacing: 0.04em;
 }
+.lesson-cta summary span {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.lesson-cta summary span::after {
+  position: absolute;
+  top: -25%;
+  bottom: -25%;
+  left: -35%;
+  width: 18%;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+  filter: blur(2px);
+  animation: cta-xray 1.8s linear infinite;
+  pointer-events: none;
+}
+@keyframes cta-xray {
+  from {
+    left: -35%;
+  }
+  to {
+    left: 120%;
+  }
+}
 .lesson-cta summary::after {
   animation: cta-arrow 1.1s ease-in-out infinite;
-}
-@keyframes cta-highlight {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-  }
-  50% {
-    box-shadow:
-      0 0 0 4px rgba(255, 255, 255, 0.32),
-      0 0 18px rgba(255, 255, 255, 0.18);
-  }
 }
 @keyframes cta-arrow {
   0%,
@@ -454,11 +482,11 @@ h1 {
     letter-spacing: 0.06em;
   }
   .staff-tagline {
-    width: 100%;
-    margin-top: 2rem;
+    width: min(100%, 330px);
+    margin-top: calc(var(--staff-gap) * 1.5);
   }
   .staff-word {
-    font-size: 0.65rem;
+    font-size: calc(var(--staff-gap) * 0.52);
   }
   .site-sections,
   .social-cards {
