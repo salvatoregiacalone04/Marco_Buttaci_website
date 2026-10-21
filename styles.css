@@ -35,18 +35,35 @@ body {
 }
 
 h1 {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: start;
-  margin: clamp(1.5rem, 7vh, 5rem) 0 0;
   color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(1rem, 2vw, 2rem);
-  font-weight: 500;
+  font-style: italic;
+  font-weight: 400;
   letter-spacing: 0.08em;
   line-height: 0.95;
   text-align: left;
   white-space: nowrap;
+}
+
+.musician-info {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  margin-top: clamp(1.5rem, 7vh, 5rem);
+}
+
+.musician-info h1 {
+  margin: 0;
+}
+
+.musician-info p {
+  margin: 0.8rem 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(0.7rem, 1.1vw, 0.95rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
 }
 
 .image-placeholder {
@@ -115,9 +132,17 @@ h1 {
   }
 
   h1 {
-    margin-top: 3.5rem;
     font-size: clamp(0.85rem, 4vw, 1.15rem);
     letter-spacing: 0.045em;
+  }
+
+  .musician-info {
+    margin-top: 3.5rem;
+  }
+
+  .musician-info p {
+    margin-top: 0.6rem;
+    font-size: 0.7rem;
   }
 
   .image-placeholder {
