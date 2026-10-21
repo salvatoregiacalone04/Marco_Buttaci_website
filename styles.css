@@ -127,19 +127,19 @@ h1 {
   letter-spacing: 0.04em;
 }
 .word-one {
-  transform: translateY(-20px);
+  transform: translateY(-15px);
 }
 .word-two {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .word-three {
-  transform: translateY(0);
+  transform: translateY(5px);
 }
 .word-four {
-  transform: translateY(10px);
+  transform: translateY(15px);
 }
 .word-five {
-  transform: translateY(20px);
+  transform: translateY(25px);
 }
 
 .site-sections {
