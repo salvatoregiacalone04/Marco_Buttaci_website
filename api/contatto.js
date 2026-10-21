@@ -49,7 +49,9 @@ export default async function handler(req, res) {
 
   const nome = typeof body.nome === 'string' ? body.nome.trim() : '';
   const email = typeof body.email === 'string' ? body.email.trim() : '';
-  const messaggio = typeof body.messaggio === 'string' ? body.messaggio.trim() : '';
+  const messaggio = typeof body.messaggio === 'string' && body.messaggio.trim()
+    ? body.messaggio.trim()
+    : null;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phonePattern = /^\+?[0-9][0-9\s().-]{6,24}$/;
   const isEmail = emailPattern.test(email);
@@ -61,7 +63,7 @@ export default async function handler(req, res) {
   if (email.length < 3 || email.length > 200 || (!isEmail && !isPhone)) {
     return res.status(400).json({ error: 'Inserisci un’email o un numero di telefono valido' });
   }
-  if (messaggio.length < 1 || messaggio.length > 2000) {
+  if (messaggio !== null && messaggio.length > 2000) {
     return res.status(400).json({ error: 'Inserisci un messaggio valido' });
   }
 
@@ -92,7 +94,9 @@ export default async function handler(req, res) {
 
   const safeNome = escapeHtml(nome);
   const safeEmail = escapeHtml(email);
-  const safeMessaggio = escapeHtml(messaggio).replace(/\r?\n/g, '<br>');
+  const safeMessaggio = messaggio
+    ? escapeHtml(messaggio).replace(/\r?\n/g, '<br>')
+    : '<em>Nessun messaggio inserito.</em>';
 
   // La riga è già salvata: gli errori email vengono loggati senza fallire la richiesta.
   try {
