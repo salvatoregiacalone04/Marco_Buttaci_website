@@ -1,5 +1,25 @@
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
+const navLinks = [...document.querySelectorAll('.main-nav a')];
+const navSections = ['professional', 'lessons', 'social']
+  .map((id) => document.getElementById(id))
+  .filter(Boolean);
+
+const updateActiveNav = () => {
+  const marker = window.innerHeight * 0.35;
+  let currentSection = navSections[0];
+
+  navSections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= marker) currentSection = section;
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.toggle('is-active', link.getAttribute('href') === `#${currentSection.id}`);
+  });
+};
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
 
 menuButton?.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
@@ -20,6 +40,9 @@ const callCta = document.querySelector('.call-cta');
 if (callCta?.firstChild) {
   callCta.firstChild.textContent = 'Prenota il tuo primo incontro gratuito ';
 }
+
+const footerName = document.querySelector('.site-footer span');
+if (footerName) footerName.textContent = 'Salvatore Giacalone';
 
 contactForm?.addEventListener('submit', async (event) => {
   event.preventDefault();

@@ -82,6 +82,7 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 .site-header{position:sticky;top:0;z-index:20;justify-content:center;background:rgba(16,11,8,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.12)}
 .main-nav{display:flex;align-items:center;justify-content:center;gap:clamp(22px,4vw,52px);margin:0;color:var(--white);font-size:clamp(11px,1.2vw,13px);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
 .main-nav a{transition:color .25s ease}
+.main-nav a.is-active{color:var(--orange);text-shadow:0 0 14px rgba(242,107,39,.35)}
 .menu-toggle{display:none!important}
 .hero,.music,.social{scroll-margin-top:105px}
 .lesson-dropdown summary{font-size:clamp(10px,3.3vw,16px);letter-spacing:.06em;white-space:nowrap}
