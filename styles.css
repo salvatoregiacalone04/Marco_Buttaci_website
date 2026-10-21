@@ -89,5 +89,6 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 .lesson-details{margin:18px 0 24px;padding-left:14px;border-left:2px solid var(--orange)}
 .lesson-details p{margin:0}
 .lesson-details strong{color:var(--white)}
-.whatsapp-cta{margin:18px 0;color:var(--muted);font-size:14px}
-.whatsapp-cta a{color:var(--orange-light);text-decoration:underline;text-underline-offset:3px}
+.whatsapp-dropdown .whatsapp-cta{margin:0;color:var(--orange)}
+.whatsapp-cta a{color:inherit;text-decoration:none}
+.whatsapp-cta span{color:var(--orange);font-size:22px}
