@@ -395,6 +395,49 @@ h1 {
 }
 
 @media (max-width: 650px) {
+  .lesson-page {
+    padding: 1.5rem 1.1rem 4rem;
+  }
+  .lesson-eyebrow {
+    margin-top: 3rem;
+  }
+  .lesson-header h1 {
+    max-width: 100%;
+    font-size: clamp(1.55rem, 8vw, 2.2rem);
+  }
+  .lesson-accordion summary {
+    gap: 0.5rem;
+    padding: 1rem 0;
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
+  }
+  .lesson-accordion summary::after {
+    flex: 0 0 auto;
+    font-size: 1.15rem;
+  }
+  .lesson-info-list li {
+    padding: 0.7rem 0;
+    font-size: 0.85rem;
+  }
+  .contact-form {
+    gap: 1.1rem;
+    margin-top: 2.5rem;
+  }
+  .field label {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+  }
+  .field input,
+  .field textarea {
+    padding: 0.7rem 0;
+    font-size: 0.9rem;
+  }
+  .submit-button {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.7rem;
+  }
   .hero {
     grid-template-columns: 100px 1fr;
     gap: 1.25rem;
