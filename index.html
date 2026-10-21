@@ -3,31 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Marco Buttaci" />
+    <meta
+      name="description"
+      content="Marco Buttaci, saxofonista e musicista."
+    />
     <title>Marco Buttaci</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="landing">
-      <div class="musician-info">
-        <h1>MARCO BUTTACI</h1>
-        <p>Amo suonare il sax</p>
-      </div>
-      <div class="image-placeholder" aria-label="Placeholder per immagine verticale">
-        <img src="assets/images/marco-buttaci.jpeg" alt="Marco Buttaci con il sassofono" />
-      </div>
+      <header class="hero">
+        <div class="image-placeholder">
+          <img
+            src="assets/images/marco-buttaci.jpeg"
+            alt="Marco Buttaci con il sassofono"
+          />
+        </div>
 
-      <div class="site-sections">
-        <section id="biografia">
-          <h2>BIOGRAFIA</h2>
-        </section>
-        <section id="lezioni">
-          <h2>LEZIONI</h2>
-        </section>
-        <section id="social">
-          <h2>SOCIAL</h2>
-        </section>
-      </div>
+        <div class="musician-info">
+          <h1>MARCO BUTTACI</h1>
+          <div class="staff-tagline" aria-label="See you in five lines">
+            <span class="staff-word word-one">See</span>
+            <span class="staff-word word-two">you</span>
+            <span class="staff-word word-three">in</span>
+            <span class="staff-word word-four">five</span>
+            <span class="staff-word word-five">lines</span>
+          </div>
+        </div>
+      </header>
+
+      <nav class="site-sections" aria-label="Navigazione principale">
+        <a class="section-link" href="#about-me">ABOUT ME</a>
+        <a class="section-link" href="lezioni.html">LEZIONI</a>
+        <a class="section-link" href="#social">SOCIAL</a>
+      </nav>
+
+      <section class="content-section about-section" id="about-me">
+        <p class="eyebrow">01 / ABOUT ME</p>
+        <h2>ABOUT ME</h2>
+      </section>
+
+      <section class="content-section social-section" id="social">
+        <p class="eyebrow">02 / SOCIAL</p>
+        <h2>SOCIAL</h2>
+        <div class="social-cards">
+          <a
+            class="social-card"
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="social-number">01</span>
+            <span class="social-name">Instagram</span>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a
+            class="social-card"
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="social-number">02</span>
+            <span class="social-name">YouTube</span>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a
+            class="social-card"
+            href="https://open.spotify.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="social-number">03</span>
+            <span class="social-name">Spotify</span>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

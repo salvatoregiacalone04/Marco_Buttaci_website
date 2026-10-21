@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contatta Marco Buttaci per informazioni sulle lezioni."
+    />
+    <title>Lezioni — Marco Buttaci</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="lesson-page">
+      <a class="back-link" href="index.html">← TORNA ALLA HOME</a>
+      <header class="lesson-header">
+        <p class="eyebrow">03 / LEZIONI</p>
+        <h1>LEZIONI</h1>
+        <p>
+          Scrivimi per ricevere maggiori informazioni sulle lezioni di sax e
+          raccontarmi di cosa hai bisogno.
+        </p>
+      </header>
+
+      <form class="contact-form" action="/api/contatto" method="post">
+        <div class="field">
+          <label for="nome">Nome e cognome *</label>
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            autocomplete="name"
+            required
+          />
+        </div>
+        <div class="field">
+          <label for="contatto">Numero di telefono o indirizzo email *</label>
+          <input
+            id="contatto"
+            name="contatto"
+            type="text"
+            autocomplete="email"
+            required
+          />
+        </div>
+        <div class="field">
+          <label for="messaggio">Messaggio</label>
+          <textarea id="messaggio" name="messaggio" rows="5"></textarea>
+        </div>
+        <button class="submit-button" type="submit">Invia richiesta</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
