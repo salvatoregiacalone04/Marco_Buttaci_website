@@ -45,14 +45,16 @@ h1 {
 }
 
 .image-placeholder {
-  width: min(20vw, 240px);
-  height: min(42vh, 460px);
-  min-width: 160px;
-  min-height: 280px;
+  width: min(17vw, 210px);
+  height: min(38vh, 420px);
+  min-width: 145px;
+  min-height: 250px;
   display: grid;
   place-items: center;
-  border: 1px solid #fff;
+  border: 0;
+  background: #000;
   color: #fff;
+  overflow: hidden;
 }
 
 .image-placeholder span {
@@ -78,7 +80,7 @@ h1 {
   }
 
   .image-placeholder {
-    width: min(48vw, 220px);
-    height: min(46vh, 420px);
+    width: min(42vw, 190px);
+    height: min(40vh, 360px);
   }
 }
