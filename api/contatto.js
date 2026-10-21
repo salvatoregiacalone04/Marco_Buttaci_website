@@ -69,6 +69,7 @@ export default async function handler(req, res) {
 
   let richiesta;
   try {
+    const storedMessaggio = messaggio || 'Nessun messaggio inserito.';
     const response = await fetch(`${process.env.SUPABASE_URL}/rest/v1/richieste`, {
       method: 'POST',
       headers: {
@@ -77,7 +78,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
         Prefer: 'return=representation',
       },
-      body: JSON.stringify({ nome, email, messaggio }),
+      body: JSON.stringify({ nome, email, messaggio: storedMessaggio }),
     });
 
     const details = await response.json().catch(() => null);
