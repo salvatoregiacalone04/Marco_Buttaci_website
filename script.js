@@ -16,6 +16,11 @@ nav?.querySelectorAll('a').forEach((link) => {
 
 const contactForm = document.querySelector('.call-form');
 
+const callCta = document.querySelector('.call-cta');
+if (callCta?.firstChild) {
+  callCta.firstChild.textContent = 'Prenota il tuo primo incontro gratuito ';
+}
+
 contactForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
 
