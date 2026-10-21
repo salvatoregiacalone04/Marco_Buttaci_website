@@ -127,19 +127,19 @@ h1 {
   letter-spacing: 0.04em;
 }
 .word-one {
-  transform: translateY(-15px);
+  transform: translateY(25px);
 }
 .word-two {
-  transform: translateY(-5px);
+  transform: translateY(15px);
 }
 .word-three {
   transform: translateY(5px);
 }
 .word-four {
-  transform: translateY(15px);
+  transform: translateY(-5px);
 }
 .word-five {
-  transform: translateY(25px);
+  transform: translateY(-15px);
 }
 
 .site-sections {
@@ -240,11 +240,11 @@ h1 {
   font-style: normal;
   line-height: 1.05;
 }
-.lesson-header p {
-  max-width: 460px;
-  margin: 1.5rem 0 0;
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 1.6;
+.lesson-eyebrow {
+  margin-top: clamp(4rem, 10vw, 8rem);
+}
+.lesson-header h1 {
+  margin-top: 1rem;
 }
 .lesson-accordion {
   max-width: 700px;
@@ -269,12 +269,12 @@ h1 {
   display: none;
 }
 .lesson-accordion summary::after {
-  content: "+";
+  content: "⌄";
   font-size: 1.5rem;
   font-weight: 300;
 }
 .lesson-accordion[open] summary::after {
-  content: "−";
+  content: "⌃";
 }
 .lesson-info-list {
   display: grid;
@@ -300,6 +300,18 @@ h1 {
 }
 .lesson-cta {
   margin-top: 1rem;
+}
+.lesson-cta[open] {
+  animation: cta-stroke 1.8s ease-in-out infinite;
+}
+@keyframes cta-stroke {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.22);
+  }
 }
 .contact-form {
   display: grid;
