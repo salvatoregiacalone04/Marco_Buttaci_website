@@ -3,111 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Salvatore Giacalone — pianista, performer e musicista." />
-    <title>Salvatore Giacalone — Pianista</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+    <meta name="description" content="Marco Buttaci" />
+    <title>Marco Buttaci</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <nav class="main-nav" aria-label="Navigazione principale">
-        <a href="#professional">PROFILO</a>
-        <a href="#lessons">LEZIONI</a>
-        <a href="#social">SOCIAL</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">☰</button>
-    </header>
-
-    <main id="top">
-      <section class="hero section-shell" id="professional">
-        <div class="hero-copy">
-          <p class="hero-name">Salvatore Giacalone</p>
-          <p class="eyebrow"><span></span> MUSICISTA</p>
-          <details class="profile-dropdown">
-            <summary>Profilo professionale <span>↓</span></summary>
-            <div class="profile-copy">
-            <h3>Formazione</h3>
-            <p>Diploma accademico di I livello in Pianoforte Classico.</p>
-            <p>Solida preparazione pratica e teorica in ambito musicale, sviluppata attraverso un percorso di formazione lungo e intensivo (2016–2026). Buone capacità esecutive ed interpretative, unite ad una preziosa esperienza concertistica maturata negli anni attraverso numerose esibizioni pubbliche, concorsi e masterclass.</p>
-            <h3>Premi e concorsi</h3>
-            <ul>
-              <li>Concorso musicale giovanile “Peppuccia Linares Villani” (Mazara del Vallo): partecipante alla 14ª, 15ª, 16ª, 18ª e 19ª edizione. Vincitore assoluto del Primo Premio con un punteggio di 100/100 (19ª edizione).</li>
-              <li>Concorso Musicale “Salvatore Capizzi – Antonio Maiorana”, 6–10 maggio 2026: Vincitore del Primo Premio con il punteggio di 98/100.</li>
-            </ul>
-            <h3>Esperienza internazionale</h3>
-            <p>Progetto Erasmus Short-Term Mobility · Iași, Romania · 2025</p>
-            <p>Partecipazione a masterclass di pianoforte di alto livello con musicisti di fama internazionale, tra cui Judit Gábos, Luca Celoni, Jin Ju, Roberto Prosseda, Giulio Potenza, Ioana Stănescu, Dragoș Andrei Cantea, Ana Telles, Mariam Kharatyan, Frank-Immo Zichner, Alessandro Deljavan, Zarębińska e Grodecki.</p>
-            </div>
-          </details>
-        </div>
-        <div class="hero-art" aria-label="Spazio per una fotografia di Salvatore al pianoforte" role="img">
-          <div class="art-glow"></div>
-          <div class="image-placeholder"><img src="assets/images/WhatsApp Image 2026-10-18 at 11.36.10.jpeg" alt="Salvatore Giacalone al pianoforte" /></div>
-        </div>
-        <div class="scroll-note"><span class="scroll-line"></span> SCORRI PER SCOPRIRE DI PIÙ</div>
-      </section>
-
-      <section class="music section-shell" id="lessons">
-        <div class="section-label">02 / Lezioni</div>
-        <div class="music-heading"><h2><em>Lezioni al pianoforte.</em></h2></div>
-        <div class="lesson-dropdowns">
-          <details class="lesson-dropdown">
-            <summary class="lesson-row">Info lezioni <span>↓</span></summary>
-            <div class="lesson-content">
-              <p>Da sempre il mio sogno è insegnare e trasmettere ad altri l'arte della musica, per suonare il pianoforte con grandissima passione. Dopo aver effettuato insieme un incontro conoscitivo totalmente gratuito stabiliremo insieme il tipo di programma da andare a svolgere.</p>
-                <div class="lesson-details">
-                  <p><strong>Dove:</strong> Online/in presenza a Mazara del Vallo</p>
-                  <p><strong>Durata:</strong> 1 ora e 30 minuti (personalizzabile in base alle tue esigenze)</p>
-                  <p><strong>Prezzo:</strong> 10 € all’ora</p>
-                  <p><strong>Primo incontro:</strong> gratuito</p>
-                </div>
-                <p>All'interno delle mie lezioni, troverai:</p>
-              <ul>
-                <li>Un metodo personalizzato di insegnamento in base alle tue esigenze.</li>
-                <li>Lezioni di pianoforte comprendenti esercizi di tecnica e brani scelti insieme.</li>
-                <li>Lezioni di teoria e solfeggio, che rispecchiano per qualsiasi musicista le fondamenta.</li>
-                <li>Materiale didattico.</li>
-              </ul>
-              <p>Per tantissimi anni, ogni giorno, ho riscontrato, come qualsiasi pianista, le difficoltà che incombono nello studio del pianoforte, trovando il modo ogni volta di superare gli ostacoli di questa grande disciplina. Per questo, all'interno delle mie lezioni, ti darò le soluzioni che ti permetteranno di creare un ottimo metodo di studio, trasmessomi dagli insegnanti con cui ho seguito il mio lunghissimo percorso di formazione.</p>
-              <p>Compila il form per una chiacchierata!</p>
-            </div>
-          </details>
-          <details class="lesson-dropdown">
-            <summary class="lesson-row call-cta">Prenota una call <span>↓</span></summary>
-              <form class="call-form" action="/api/contatto" method="post">
-              <label>Nome e cognome *<input type="text" name="nome" maxlength="100" required /></label>
-              <label>Email o numero di telefono *<input type="text" name="email" maxlength="200" placeholder="es. nome@email.it oppure 333 123 4567" required /></label>
-              <label>Messaggio (facoltativo)<textarea name="messaggio" maxlength="2000" rows="3" placeholder="Raccontami qualcosa sui tuoi obiettivi..."></textarea></label>
-              <label class="honeypot" aria-hidden="true">Sito<input type="text" name="sito" tabindex="-1" autocomplete="off" /></label>
-              <button class="button button-primary" type="submit">Invia richiesta</button>
-              <small class="form-status" role="status" aria-live="polite"></small>
-            </form>
-          </details>
-          <a class="lesson-dropdown lesson-row whatsapp-link" href="https://wa.me/393201146712" target="_blank" rel="noreferrer"><span class="whatsapp-label">Scrivimi su Whatsapp</span><span class="whatsapp-arrow" aria-hidden="true">→</span></a>
-        </div>
-      </section>
-
-      <section class="social section-shell" id="social">
-        <div class="social-header"><div class="section-label">03 / Social</div><h2 class="social-heading"><em>Ascoltami</em></h2></div>
-        <div class="social-grid">
-          <a class="social-card" href="https://www.tiktok.com/@salvogiaca04" target="_blank" rel="noreferrer"><span class="social-icon">♪</span><span class="social-name">TikTok</span><span class="social-handle">@salvogiaca04</span><span class="social-arrow">↗</span></a>
-          <a class="social-card" href="https://youtube.com/@salvatoregiacalone-b7k" target="_blank" rel="noreferrer"><span class="social-icon">▶</span><span class="social-name">YouTube</span><span class="social-handle">Salvatore Giacalone</span><span class="social-arrow">↗</span></a>
-        </div>
-        <div class="youtube-video">
-          <iframe
-            src="https://www.youtube.com/embed/Lx3-CUswLvk"
-            title="Video YouTube di Salvatore Giacalone"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-      </section>
-
+    <main class="landing">
+      <h1>MARCO BUTTACI</h1>
+      <div class="image-placeholder" aria-label="Placeholder per immagine verticale">
+        <span>IMMAGINE</span>
+      </div>
     </main>
-
-    <footer class="site-footer section-shell"><span>© 2026 Salvatore Giacalone</span><span>Made with <i>♪</i> and intention</span><a href="#top">Torna su ↑</a></footer>
-    <script src="script.js"></script>
   </body>
 </html>
