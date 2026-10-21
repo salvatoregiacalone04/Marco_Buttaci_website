@@ -77,9 +77,9 @@
           <details class="lesson-dropdown">
             <summary class="call-cta">Prenota una call <span>↓</span></summary>
             <form class="call-form" action="/api/contatto" method="post">
-              <label>Nome e cognome<input type="text" name="nome" maxlength="100" required /></label>
-                <label>Email o numero di telefono<input type="text" name="email" maxlength="200" placeholder="es. nome@email.it oppure 333 123 4567" required /></label>
-                <label>Messaggio<textarea name="messaggio" maxlength="2000" rows="3" placeholder="Raccontami qualcosa sui tuoi obiettivi..."></textarea></label>
+              <label>Nome e cognome *<input type="text" name="nome" maxlength="100" required /></label>
+              <label>Email o numero di telefono *<input type="text" name="email" maxlength="200" placeholder="es. nome@email.it oppure 333 123 4567" required /></label>
+              <label>Messaggio (facoltativo)<textarea name="messaggio" maxlength="2000" rows="3" placeholder="Raccontami qualcosa sui tuoi obiettivi..."></textarea></label>
               <label class="honeypot" aria-hidden="true">Sito<input type="text" name="sito" tabindex="-1" autocomplete="off" /></label>
               <button class="button button-primary" type="submit">Invia richiesta</button>
               <small class="form-status" role="status" aria-live="polite"></small>
