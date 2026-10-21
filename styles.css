@@ -86,3 +86,6 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 .menu-toggle{display:none!important}
 .hero,.music,.social{scroll-margin-top:105px}
 .lesson-dropdown summary{font-size:clamp(10px,3.3vw,16px);letter-spacing:.06em;white-space:nowrap}
+.lesson-details{margin:18px 0 24px;padding-left:14px;border-left:2px solid var(--orange)}
+.lesson-details p{margin:6px 0}
+.lesson-details strong{color:var(--white)}
