@@ -32,6 +32,37 @@ a {
   padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 4rem) 7rem;
 }
 
+.content-page {
+  width: min(1180px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 4rem) 7rem;
+}
+
+.content-page h1 {
+  margin-top: clamp(4rem, 10vw, 8rem);
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  font-style: normal;
+}
+
+.page-copy {
+  max-width: 600px;
+  margin-top: 3rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.page-copy p:first-child {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.social-page .social-cards {
+  max-width: 900px;
+  margin-top: 4rem;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(145px, 210px) 1fr;
