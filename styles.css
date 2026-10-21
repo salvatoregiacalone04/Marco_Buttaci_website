@@ -89,5 +89,11 @@ body{background:#100b08;background-image:radial-gradient(ellipse at 78% 14%,rgba
 .lesson-details{margin:18px 0 24px;padding-left:14px;border-left:2px solid var(--orange)}
 .lesson-details p{margin:0}
 .lesson-details strong{color:var(--white)}
-.whatsapp-link{display:flex;width:100%;align-items:center;padding:22px 0;color:var(--white);font-size:clamp(10px,3.3vw,16px);letter-spacing:.06em;text-transform:uppercase;text-decoration:underline;text-underline-offset:4px;white-space:nowrap;transition:color .25s ease}
-.whatsapp-link:hover{color:var(--white)}
+.lesson-row{display:flex;width:100%;height:68px;align-items:center;justify-content:space-between;padding:0;color:var(--white);font-size:clamp(10px,3.3vw,16px);letter-spacing:.06em;line-height:1.5;text-transform:uppercase;white-space:nowrap;box-sizing:border-box}
+.lesson-row span{color:var(--orange);font-size:22px;font-weight:400}
+.lesson-dropdown:first-child .lesson-row{color:var(--white)}
+.lesson-row.call-cta{color:var(--orange)}
+.whatsapp-link{justify-content:flex-start;gap:10px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;transition:color .25s ease}
+.whatsapp-link,.whatsapp-link:hover{color:var(--white)}
+.whatsapp-link .whatsapp-arrow{color:var(--white);font-size:18px;line-height:1}
+.music{padding-bottom:0}
