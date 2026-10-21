@@ -235,8 +235,10 @@ h1 {
   max-width: 700px;
 }
 .lesson-header h1 {
-  font-size: clamp(2.5rem, 8vw, 7rem);
+  max-width: 510px;
+  font-size: clamp(1.8rem, 4.5vw, 3.8rem);
   font-style: normal;
+  line-height: 1.05;
 }
 .lesson-header p {
   max-width: 460px;
@@ -244,33 +246,60 @@ h1 {
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.6;
 }
-.lesson-details {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.lesson-accordion {
   max-width: 700px;
   margin-top: 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-}
-.lesson-detail {
-  display: grid;
-  gap: 0.6rem;
-  min-height: 120px;
-  padding: 1.2rem 1rem 1.2rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-.detail-label {
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.lesson-accordion + .lesson-accordion {
+  margin-top: 1rem;
 }
-.lesson-detail strong {
-  font-size: 1rem;
+.lesson-accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.3rem 0;
+  cursor: pointer;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  list-style: none;
+}
+.lesson-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.lesson-accordion summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.lesson-accordion[open] summary::after {
+  content: "−";
+}
+.lesson-info-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0 0 1.2rem;
+  list-style: none;
+}
+.lesson-info-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+}
+.lesson-info-list strong {
+  color: #fff;
   font-weight: 400;
-  line-height: 1.4;
 }
-.lesson-detail--highlight strong {
-  font-style: italic;
+.lesson-info-list span {
+  text-align: right;
+}
+.lesson-cta {
+  margin-top: 1rem;
 }
 .contact-form {
   display: grid;
@@ -346,9 +375,15 @@ h1 {
     font-size: 0.65rem;
   }
   .site-sections,
-  .social-cards,
-  .lesson-details {
+  .social-cards {
     grid-template-columns: 1fr;
+  }
+  .lesson-info-list li {
+    display: grid;
+    gap: 0.35rem;
+  }
+  .lesson-info-list span {
+    text-align: left;
   }
   .section-link,
   .social-card {
