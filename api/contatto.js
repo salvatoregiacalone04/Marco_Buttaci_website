@@ -51,12 +51,15 @@ export default async function handler(req, res) {
   const email = typeof body.email === 'string' ? body.email.trim() : '';
   const messaggio = typeof body.messaggio === 'string' ? body.messaggio.trim() : '';
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phonePattern = /^\+?[0-9][0-9\s().-]{6,24}$/;
+  const isEmail = emailPattern.test(email);
+  const isPhone = phonePattern.test(email);
 
   if (nome.length < 1 || nome.length > 100) {
     return res.status(400).json({ error: 'Inserisci un nome valido' });
   }
-  if (email.length < 3 || email.length > 200 || !emailPattern.test(email)) {
-    return res.status(400).json({ error: 'Inserisci un’email valida' });
+  if (email.length < 3 || email.length > 200 || (!isEmail && !isPhone)) {
+    return res.status(400).json({ error: 'Inserisci un’email o un numero di telefono valido' });
   }
   if (messaggio.length < 1 || messaggio.length > 2000) {
     return res.status(400).json({ error: 'Inserisci un messaggio valido' });
@@ -96,12 +99,12 @@ export default async function handler(req, res) {
     await sendEmail({
       from: process.env.MAIL_FROM,
       to: process.env.OWNER_EMAIL,
-      replyTo: email,
+      replyTo: isEmail ? email : undefined,
       subject: `Nuovo messaggio da ${nome}`,
       html: `
         <h3>Hai ricevuto una nuova richiesta dal sito:</h3>
         <p><strong>Nome:</strong> ${safeNome}</p>
-        <p><strong>Email:</strong> ${safeEmail}</p>
+        <p><strong>Contatto:</strong> ${safeEmail}</p>
         <p><strong>Messaggio:</strong></p>
         <p>${safeMessaggio}</p>
       `,
@@ -111,7 +114,7 @@ export default async function handler(req, res) {
     console.error('Errore invio notifica email:', error);
   }
 
-  if (String(process.env.SEND_CONFIRMATION).toLowerCase() === 'true') {
+  if (isEmail && String(process.env.SEND_CONFIRMATION).toLowerCase() === 'true') {
     try {
       await sendEmail({
         from: process.env.MAIL_FROM,
