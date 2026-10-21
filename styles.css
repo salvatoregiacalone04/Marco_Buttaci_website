@@ -44,10 +44,10 @@ h1 {
 }
 
 .image-placeholder {
-  width: min(25vw, 300px);
-  height: min(48vh, 520px);
-  min-width: 180px;
-  min-height: 300px;
+  width: min(20vw, 240px);
+  height: min(42vh, 460px);
+  min-width: 160px;
+  min-height: 280px;
   display: grid;
   place-items: center;
   border: 1px solid #fff;
@@ -70,7 +70,7 @@ h1 {
   }
 
   .image-placeholder {
-    width: min(58vw, 280px);
-    height: min(52vh, 480px);
+    width: min(48vw, 220px);
+    height: min(46vh, 420px);
   }
 }
