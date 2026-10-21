@@ -55,6 +55,8 @@ h1 {
   background: #000;
   color: #fff;
   overflow: hidden;
+  align-self: flex-start;
+  margin-left: clamp(2rem, 10vw, 10rem);
 }
 
 .image-placeholder span {
@@ -82,5 +84,6 @@ h1 {
   .image-placeholder {
     width: min(42vw, 190px);
     height: min(40vh, 360px);
+    margin-left: 8vw;
   }
 }
