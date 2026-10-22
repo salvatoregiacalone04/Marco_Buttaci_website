@@ -133,18 +133,37 @@ h1 {
 
 .staff-copy {
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 7%;
   z-index: 1;
-  display: grid;
-  gap: 0.05em;
+  height: calc(var(--staff-gap) * 4 + 1px);
   min-width: 55%;
   color: #fff;
   font-size: calc(var(--staff-gap) * 0.62);
   font-style: italic;
   line-height: 1;
   text-align: left;
+}
+
+.staff-copy span {
+  position: absolute;
   transform: translateY(-50%);
+}
+
+.staff-copy span:nth-child(1) {
+  top: calc(var(--staff-gap) * 0.5);
+}
+
+.staff-copy span:nth-child(2) {
+  top: calc(var(--staff-gap) * 1.5);
+}
+
+.staff-copy span:nth-child(3) {
+  top: calc(var(--staff-gap) * 2.5);
+}
+
+.staff-copy span:nth-child(4) {
+  top: calc(var(--staff-gap) * 3.5);
 }
 
 .site-sections {
