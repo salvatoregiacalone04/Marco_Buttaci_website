@@ -156,7 +156,7 @@ h1 {
   width: 100%;
   clip-path: inset(0 100% 0 0);
   transform: translateY(-50%);
-  animation: staff-line-reveal 1.8s ease-out forwards;
+  animation: staff-line-reveal 10s ease-in-out infinite;
 }
 
 .staff-copy span:nth-child(1) {
@@ -188,7 +188,12 @@ h1 {
 }
 
 @keyframes staff-line-reveal {
-  to {
+  0%,
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+  18%,
+  88% {
     clip-path: inset(0);
   }
 }
