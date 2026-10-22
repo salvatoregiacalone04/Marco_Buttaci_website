@@ -435,6 +435,26 @@ h1 {
   background: #fff;
   color: #000;
 }
+.form-status {
+  min-height: 0;
+  margin: 0.5rem 0 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.form-status:empty {
+  display: none;
+}
+.form-status.is-success {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.form-status.is-error {
+  border-color: rgba(255, 120, 120, 0.8);
+  color: #ffb6b6;
+}
 
 @media (max-width: 650px) {
   .lesson-page {

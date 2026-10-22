@@ -12,7 +12,10 @@ contactForm?.addEventListener("submit", async (event) => {
     submitButton.disabled = true;
     submitButton.textContent = "Invio in corso…";
   }
-  if (status) status.textContent = "";
+  if (status) {
+    status.textContent = "";
+    status.className = "form-status";
+  }
 
   try {
     const response = await fetch(contactForm.action, {
@@ -30,8 +33,10 @@ contactForm?.addEventListener("submit", async (event) => {
       throw new Error(result.error || "Controlla i dati inseriti e riprova.");
 
     contactForm.reset();
+    if (status) status.classList.add("is-success");
     if (status) status.textContent = "Richiesta inviata. Ti risponderò presto.";
   } catch (error) {
+    if (status) status.classList.add("is-error");
     if (status)
       status.textContent =
         error.message || "Si è verificato un errore. Riprova.";
