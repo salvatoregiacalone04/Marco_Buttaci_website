@@ -39,6 +39,11 @@ a {
   padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 4rem) 7rem;
 }
 
+.content-page .back-link {
+  display: inline-block;
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
 .content-page h1 {
   margin-top: clamp(4rem, 10vw, 8rem);
   font-size: clamp(2.5rem, 8vw, 7rem);
