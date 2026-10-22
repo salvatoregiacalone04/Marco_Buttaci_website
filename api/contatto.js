@@ -103,7 +103,10 @@ export default async function handler(req, res) {
   try {
     await sendEmail({
       from: process.env.MAIL_FROM,
-      to: process.env.OWNER_EMAIL,
+      to: process.env.OWNER_EMAIL
+        .split(',')
+        .map((address) => address.trim())
+        .filter(Boolean),
       replyTo: isEmail ? email : undefined,
       subject: `Nuovo messaggio da ${nome}`,
       html: `
