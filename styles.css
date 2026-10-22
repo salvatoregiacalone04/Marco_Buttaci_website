@@ -270,21 +270,14 @@ h1 {
 .lesson-header h1 {
   margin-top: 1rem;
 }
-.lesson-bio {
+.about-copy {
   max-width: 760px;
-  margin-top: clamp(3rem, 7vw, 6rem);
-  color: rgba(255, 255, 255, 0.72);
   font-size: 1.05rem;
   line-height: 1.75;
 }
-.lesson-bio h2 {
-  margin-bottom: 2rem;
-  color: #fff;
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  letter-spacing: 0.12em;
-}
-.lesson-bio p {
-  margin: 0 0 1.6rem;
+.about-copy p:first-child {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: inherit;
 }
 .lesson-accordion {
   max-width: 700px;
