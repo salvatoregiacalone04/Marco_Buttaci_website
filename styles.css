@@ -98,7 +98,7 @@ h1,
 h2 {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 700;
 }
 h1 {
   font-size: clamp(1.3rem, 3vw, 2.4rem);
@@ -122,32 +122,36 @@ h1 {
 .treble-clef {
   position: absolute;
   left: 7%;
-  top: 50%;
+  top: var(--staff-gap);
   z-index: 1;
   color: #fff;
   font-family: "Times New Roman", serif;
   font-size: calc(var(--staff-gap) * 2.5);
   line-height: 0.65;
-  transform: translateY(-50%);
+  transform: translateY(-12%);
 }
 
 .staff-copy {
   position: absolute;
   top: 0;
-  right: 7%;
+  left: 26%;
   z-index: 1;
   height: calc(var(--staff-gap) * 4 + 1px);
-  min-width: 55%;
+  width: 68%;
   color: #fff;
   font-size: calc(var(--staff-gap) * 0.62);
   font-style: italic;
   line-height: 1;
-  text-align: left;
+  text-align: center;
 }
 
 .staff-copy span {
   position: absolute;
+  left: 0;
+  width: 100%;
+  clip-path: inset(0 100% 0 0);
   transform: translateY(-50%);
+  animation: staff-line-reveal 0.85s ease-out forwards;
 }
 
 .staff-copy span:nth-child(1) {
@@ -166,6 +170,24 @@ h1 {
   top: calc(var(--staff-gap) * 3.5);
 }
 
+.staff-copy span:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.staff-copy span:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+.staff-copy span:nth-child(4) {
+  animation-delay: 0.54s;
+}
+
+@keyframes staff-line-reveal {
+  to {
+    clip-path: inset(0);
+  }
+}
+
 .site-sections {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -179,6 +201,7 @@ h1 {
   border-right: 1px solid rgba(255, 255, 255, 0.35);
   text-decoration: none;
   font-size: 0.8rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
   transition:
     background 0.2s,
@@ -346,6 +369,12 @@ h1 {
 }
 .lesson-info-list span {
   text-align: right;
+}
+.lesson-note {
+  margin: 1.5rem 0 1.75rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 .lesson-cta {
   margin-top: 1rem;
