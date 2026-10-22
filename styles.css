@@ -466,6 +466,16 @@ h1 {
 }
 
 @media (max-width: 650px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .landing {
+    height: 100svh;
+    min-height: 100svh;
+    overflow: hidden;
+    padding: 1.25rem 1.1rem;
+  }
   .lesson-page {
     padding: 1.5rem 1.1rem 4rem;
   }
