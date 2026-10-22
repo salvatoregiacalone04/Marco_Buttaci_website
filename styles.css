@@ -127,7 +127,7 @@ h1 {
 .treble-clef {
   position: absolute;
   left: 7%;
-  top: var(--staff-gap);
+  top: calc(var(--staff-gap) * 1.5);
   z-index: 1;
   color: #fff;
   font-family: "Times New Roman", serif;
