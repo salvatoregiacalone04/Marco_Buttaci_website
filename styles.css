@@ -109,7 +109,7 @@ h1 {
 .staff-tagline {
   --staff-gap: clamp(18px, 4vw, 36px);
   position: relative;
-  height: calc(var(--staff-gap) * 5 + 1px);
+  height: calc(var(--staff-gap) * 4 + 1px);
   width: min(580px, 90vw);
   margin-top: calc(var(--staff-gap) * 1.5);
   background: repeating-linear-gradient(
@@ -119,37 +119,32 @@ h1 {
   );
 }
 
-.staff-word {
+.treble-clef {
   position: absolute;
-  left: 0;
-  width: 20%;
+  left: 7%;
+  top: 50%;
   z-index: 1;
-  font-size: calc(var(--staff-gap) * 0.58);
-  font-style: italic;
-  line-height: 1;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
+  color: #fff;
+  font-family: "Times New Roman", serif;
+  font-size: calc(var(--staff-gap) * 2.5);
+  line-height: 0.65;
   transform: translateY(-50%);
 }
-.word-one {
-  left: 0%;
-  top: calc(var(--staff-gap) * 0.5);
-}
-.word-two {
-  left: 20%;
-  top: calc(var(--staff-gap) * 1.5);
-}
-.word-three {
-  left: 40%;
-  top: calc(var(--staff-gap) * 2.5);
-}
-.word-four {
-  left: 60%;
-  top: calc(var(--staff-gap) * 3.5);
-}
-.word-five {
-  left: 80%;
-  top: calc(var(--staff-gap) * 4.5);
+
+.staff-copy {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  z-index: 1;
+  display: grid;
+  gap: 0.05em;
+  min-width: 55%;
+  color: #fff;
+  font-size: calc(var(--staff-gap) * 0.62);
+  font-style: italic;
+  line-height: 1;
+  text-align: left;
+  transform: translateY(-50%);
 }
 
 .site-sections {
